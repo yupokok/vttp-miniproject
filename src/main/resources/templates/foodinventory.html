@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles.css"/>
+
+    <title>Food Inventory</title>
+</head>
+
+<body>
+
+    
+    
+    <div class="container">
+        <h1>Food Inventory</h1>
+    <br>
+    <a th:href="@{/pets/all}" class="button">Back to All Pets</a>
+        
+        <br><br>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Food Type</th>
+                    <th>Date Purchased</th>
+                    <th>Lifespan</th>
+                    <th>Remaining Stock</th>
+                    <th>Expiring in:</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="food: ${foods}">
+                    <td data-th-text="*{food.name}"></td>
+                    <td data-th-text="*{food.datePurchased}"></td>
+                    <td data-th-text="*{food.lifespan}"></td>
+                    <td data-th-text="*{food.remainingStock}"></td>
+                    <td data-th-text="*{food.expiringIn}"></td>
+                    <td><a th:href="@{purchase/{name}(name=${food.name})}" class="btn btn-primary">Restock</a></td>
+                    <td><a th:href="@{dispose/{name}(name=${food.name})}"class="btn btn-danger">Dispose</a></td>
+                    <td>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+    
+</html>

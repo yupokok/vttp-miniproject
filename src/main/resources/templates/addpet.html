@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css"/>
+    <title>Add Pet</title>
+</head>
+<body> 
+    <div class="container">
+        <h1>Add a New Pet</h1>
+
+        <form method="POST" th:action="@{/pets/save}" data-th-object="${pet}" name="addPetForm" >
+            <table>
+            <!-- <tr>
+                    <td>
+                    <label for="image">Upload Image of Pet:</label>
+                    <input id="input-file" type="file" name="file" accept="image/png, image/jpeg" data-th-field="*{imageUrl}"/>
+                    </td>
+            </tr>
+            <tr> -->
+                <td>
+                    <label for="name">Pet Name:</label>
+                    <input type="text" id="petName" name="petName" data-th-field="*{petName}">
+                    <span data-th-if="${#fields.hasErrors('petName')}"
+								data-th-errors="*{petName}" data-th-errorclass="error">
+						</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="species"> Species:</label>
+                    <input type="text" id="species" name="species" data-th-field="*{species}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="diet">Diet:</label>
+                    <input type="text" id="diet" name="diet" data-th-field="*{diet}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="feedingFrequency">Feeding Frequency (Per Week):</label>
+                    <input type="text" id="feedingFrequency" name="feedingFrequency" data-th-field="*{feedingFrequency}">
+                    <span data-th-if="${#fields.hasErrors('feedingFrequency')}"
+								data-th-errors="*{feedingFrequency}" data-th-errorclass="error">
+						</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit"> Add New Pet</button>
+                </td>
+            </tr>
+
+        </tr>
+        </table>
+        </form>
+    </div>
+    
+</body>
+</html>

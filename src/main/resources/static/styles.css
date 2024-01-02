@@ -1,0 +1,138 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    background-color: #000000;
+    background-image: url(https://www.reptiles.swelluk.com/media/wordpress/60eb3e36aa0decc28933583022f912e2.jpg); 
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #bdbd24;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+a {
+    background-color: #09750d;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.error {
+    background-color: #d40c0c;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    text-align-last: center;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #040000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #09750d;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.pet-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.pet-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f3f0dd;
+    
+
+}
+img {
+    border-radius: 10px;
+}
+
+table {
+    border: 1px solid #000000;
+    width: 100;
+}
+
+th {
+    height: 50px;
+    width: max-content;
+    padding: 10px;
+    background-color: #09750d;
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #0d0d0d;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-danger {
+    background-color: #df0808;
+    color: #fff;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Add more styles as needed */

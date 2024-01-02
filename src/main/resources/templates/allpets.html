@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css/">
+    <title>My Pets</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Petbook</h1>
+        <h2>Kim's Pet Manager</h2>
+
+        <div data-th-unless="${#lists.isEmpty(pets)}">
+            <h2>No Pets Added Yet</h2>
+        </div>
+
+        <div data-th-unless="${#lists.isEmpty(pets)}" class="pet-gallery">
+            <!-- Replace the following block with Thymeleaf iteration over your list of pets -->
+            <div th:each="pet:${pets}" class="pet-card" th:href="@{petprofile/{petName}(petName=${pet.petName})}">
+                <img th:src="${pet.imageUrl}" alt="Pet Image" width="100">
+                <h3 data-th-text="*{pet.petName}"> </h3>                
+                <p data-th-text="*{pet.species}"> </p>
+                <p data-th-text="'Fed ' + *{pet.feedingsPerWeek} + ' times this week'"></p>
+                <a th:href="@{feed/{petName}(petName=${pet.petName})}" class="button">Feed</a> <a th:href="@{petprofile/{petName}(petName=${pet.petName})}"> More Info</a>
+            </div>
+
+            <!-- <div class="pet-card">
+                <img src="https:\/\/iili.io\/J5ui379.jpg" alt= "Pet Image" width="100">
+                <h3> Sibo </h3>
+                <p>White's Tree Frog</p>
+                <p>Fed 3 times this week</p>
+                <button data-th-action="@{/feed}"> Feed </button> <button> More Info </button>
+            </div> -->
+        </div>`
+        <br><br>
+        <a th:href="@{/pets/add}" class="button">Add New Pet</a> <a th:href="@{/pets/food}" class="button">Food Inventory</a>
+    </div>
+</body>
+</body>
+</html>
