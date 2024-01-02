@@ -9,15 +9,27 @@
 <body>
     
     <div class="container" data-th-object="${pet}"> 
+        <a th:href="@{/pets/all}" class="button">Back to All Pets</a>
         <table>
             <tr>
                 <td> 
+                    <div class="gallery">
+                        <span target="_blank">
+                          <img src="https://iili.io/J5aXCG9.md.jpg" alt="Sibo 1" >
+                        </span>
+                      </div>
                     <h1 data-th-text="*{petName}"></h1>
                     <h2 data-th-text="*{species}"></h2>
-                    <p> Diet:</p> <p data-th-text="*{diet}"></p>
+                    Diet: <p  data-th-text="*{diet}"></p>
+                    <p> Habitat: Found commonly near streams and swamps on rocks and trees or in crevices in rocks and hollow tree trunks. Also found in domestic environment, including letterboxes, toilet bowls and cisterns, bathrooms and meter boxes. Commonly kept as a pet within Australia and overseas (but now protected). Breeding occurs from November to February. Males call from hidden localities near water and often downpipes. Clumps of 200 – 2000 eggs are deposited on the surface of still water. The spawn sinks within 24 hours. Development is usually complete in 6 weeks.</p> 
                 </td>
             </tr>
         </table>
+        
+          
+          
+          </body>
+          </html>
 
     </div>
 </body>

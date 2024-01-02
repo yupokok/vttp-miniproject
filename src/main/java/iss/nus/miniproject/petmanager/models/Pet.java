@@ -40,9 +40,9 @@ public class Pet {
     }
 
 
-    public Pet(File image, String petName, String species, Integer feedingFrequency, String diet,
+    public Pet(String imageUrl, String petName, String species, Integer feedingFrequency, String diet,
             Integer feedingsPerWeek) {
-        this.image = image;
+        this.imageUrl = imageUrl;
         this.petName = petName;
         this.species = species;
         this.feedingFrequency = feedingFrequency;
@@ -50,8 +50,11 @@ public class Pet {
         this.feedingsPerWeek = feedingsPerWeek;
     }
 
-    public Pet(String string, String string2, String string3, int i, String string4, int j) {
+    
+
+    public Pet(String name, String habitat, String lifespan, String scientificName) {
     }
+
 
     public String getUsername() {
         return username;

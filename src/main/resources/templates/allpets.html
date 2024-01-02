@@ -7,16 +7,13 @@
     <title>My Pets</title>
 </head>
 <body>
+    
     <div class="container">
 
         <h1>Petbook</h1>
         <h2>Kim's Pet Manager</h2>
 
-        <div data-th-unless="${#lists.isEmpty(pets)}">
-            <h2>No Pets Added Yet</h2>
-        </div>
-
-        <div data-th-unless="${#lists.isEmpty(pets)}" class="pet-gallery">
+        <div class="pet-gallery">
             <!-- Replace the following block with Thymeleaf iteration over your list of pets -->
             <div th:each="pet:${pets}" class="pet-card" th:href="@{petprofile/{petName}(petName=${pet.petName})}">
                 <img th:src="${pet.imageUrl}" alt="Pet Image" width="100">
